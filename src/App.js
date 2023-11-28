@@ -1,17 +1,16 @@
-import "./App.css";
-import TodoForm from "./components/TodoForm";
-import TodoList from "./components/TodoList";
-import { TodoProvider } from "./context/TodoContextProvider";
+import React from 'react'
+import InputForm from './components/InputForm'
+import Todos from './components/Todos'
+import { store } from './context/store'
+import { Provider } from 'react-redux'
 
-function App() {
+const App = () => {
   return (
-    <TodoProvider>
-      <div className="App">
-        <TodoForm />
-        <TodoList />
-      </div>
-    </TodoProvider>
-  );
+    <Provider store={store}  >
+    <InputForm/>
+    <Todos/>
+    </Provider>
+  )
 }
 
-export default App;
+export default App
