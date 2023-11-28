@@ -4,7 +4,6 @@ import { deleteTodo } from "../context/TodoSlice";
 
 const Todos = () => {
   const allTodos = useSelector((state) => state.allTodos);
-  console.log(allTodos);
   const dispatch = useDispatch();
 
   return (
